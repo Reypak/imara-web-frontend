@@ -471,66 +471,82 @@ h1, h2, h3, h4, h5, h6 {
 .fade-up-ready { opacity: 0; transform: translateY(24px); }
 
 /* ================================================================
-   RESPONSIVE — Mobile First Overrides
+   NAMED LAYOUT CLASSES — grids defined in CSS so media queries work
    ================================================================ */
 
+.r-grid-stats          { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.r-grid-services-home  { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.r-grid-services-page  { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.r-grid-two-col        { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.r-grid-two-col-rev    { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.r-grid-booking        { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+.r-grid-testimonials   { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.r-grid-gallery        { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.r-grid-values         { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.r-grid-team           { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.r-grid-footer         { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 3rem; }
+.r-form-two-col        { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+/* Gallery flex accordion */
+.r-gallery-accordion { display: flex; gap: 0.75rem; height: 32rem; overflow: hidden; border-radius: 4px; }
+.r-gallery-accordion-item { flex: 1; position: relative; overflow: hidden; cursor: pointer; }
+
+/* Stat separator */
+.r-stat-border { border-right: 1px solid rgba(255,255,255,0.06); }
+
+/* Footer top flex */
+.r-footer-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+
+/* ── Flex row that stacks on mobile ── */
+.r-row { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+.r-row-between { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+
+/* ================================================================
+   RESPONSIVE BREAKPOINTS
+   ================================================================ */
+
+/* Tablet landscape ≤1280px */
+@media (max-width: 1280px) {
+  .r-grid-services-home { grid-template-columns: repeat(2, 1fr); }
+  .r-grid-values        { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Tablet portrait ≤1024px */
 @media (max-width: 1024px) {
-  /* Home stats strip */
-  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* About / story grid */
-  .two-col-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
-
-  /* Services categories */
-  .services-grid { grid-template-columns: 1fr !important; }
-
-  /* Booking grid */
-  .booking-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+  .r-grid-stats         { grid-template-columns: repeat(2, 1fr); }
+  .r-grid-services-page { grid-template-columns: repeat(2, 1fr); }
+  .r-grid-two-col       { grid-template-columns: 1fr; gap: 3rem; }
+  .r-grid-two-col-rev   { grid-template-columns: 1fr; gap: 3rem; }
+  .r-grid-booking       { grid-template-columns: 1fr; gap: 2.5rem; }
+  .r-grid-testimonials  { grid-template-columns: 1fr 1fr; }
+  .r-grid-team          { grid-template-columns: repeat(2, 1fr); }
+  .r-grid-footer        { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .r-stat-border        { border-right: none; }
+  .section-pad          { padding: 5rem 0; }
 }
 
+/* Mobile ≤768px */
 @media (max-width: 768px) {
-  /* Footer grid */
-  footer .footer-grid { grid-template-columns: 1fr 1fr !important; }
-
-  /* Gallery grid */
-  .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Home services grid */
-  .home-services-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Home stats */
-  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Values grid (About) */
-  .values-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Team grid (About) */
-  .team-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Hero typography */
-  h1 { font-size: clamp(2.5rem, 12vw, 5rem) !important; }
-
-  /* Section pad */
-  .section-pad { padding: 4rem 0 !important; }
-
-  /* Booking form grid */
-  .form-two-col { grid-template-columns: 1fr !important; }
+  .r-grid-services-home { grid-template-columns: 1fr; }
+  .r-grid-gallery       { grid-template-columns: repeat(2, 1fr); }
+  .r-grid-values        { grid-template-columns: 1fr; }
+  .r-grid-team          { grid-template-columns: 1fr; }
+  .r-grid-footer        { grid-template-columns: 1fr; gap: 2rem; }
+  .r-grid-testimonials  { grid-template-columns: 1fr; }
+  .r-form-two-col       { grid-template-columns: 1fr; }
+  .r-gallery-accordion  { flex-direction: column; height: auto; }
+  .r-gallery-accordion-item { flex: none; height: 13rem; }
+  .r-footer-top         { flex-direction: column; text-align: center; }
+  .section-pad          { padding: 4rem 0; }
+  .btn-lg               { padding: 1rem 2rem; font-size: 0.75rem; }
 }
 
-@media (max-width: 540px) {
-  /* Full single column on very small screens */
-  .gallery-grid { grid-template-columns: 1fr !important; }
-  .home-services-grid { grid-template-columns: 1fr !important; }
-  .values-grid { grid-template-columns: 1fr !important; }
-  .team-grid { grid-template-columns: 1fr !important; }
-  footer .footer-grid { grid-template-columns: 1fr !important; }
-
-  /* Stat border remove */
-  .stat-item-border { border-right: none !important; }
-
-  /* Gallery accordion – use grid instead of flex on mobile */
-  .gallery-accordion { flex-direction: column !important; height: auto !important; }
-  .gallery-accordion > div { flex: none !important; height: 14rem; }
+/* Small mobile ≤480px */
+@media (max-width: 480px) {
+  .r-grid-gallery  { grid-template-columns: 1fr; }
+  .r-grid-stats    { grid-template-columns: repeat(2, 1fr); }
+  .container       { padding: 0 1rem; }
+  .section-pad     { padding: 3rem 0; }
 }
 
 /* ── Navbar mobile helpers ── */

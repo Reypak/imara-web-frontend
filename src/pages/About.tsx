@@ -41,7 +41,7 @@ const About = () => {
       {/* ── STORY ── */}
       <section className="section-pad bg-cream">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+          <div className="r-grid-two-col">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -94,7 +94,7 @@ const About = () => {
               Our Core Values
             </h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
+          <div className="r-grid-values">
             {values.map((v, i) => (
               <motion.div
                 key={i}
@@ -125,7 +125,7 @@ const About = () => {
               Our Expert Team
             </h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+          <div className="r-grid-team">
             {team.map((member, i) => (
               <motion.div
                 key={i}

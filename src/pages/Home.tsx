@@ -99,7 +99,7 @@ const Home = () => {
       {/* ── STATS STRIP ── */}
       <section style={{ background: 'var(--ink)', padding: '3.5rem 0', borderBottom: '1px solid rgba(201,168,76,0.1)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem' }}>
+          <div className="r-grid-stats">
             {stats.map(({ icon: Icon, value, label }, i) => (
               <motion.div
                 key={i}
@@ -107,7 +107,8 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                style={{ textAlign: 'center', padding: '1.5rem', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}
+                className={i < 3 ? 'r-stat-border' : ''}
+                style={{ textAlign: 'center', padding: '1.5rem' }}
               >
                 <Icon size={20} style={{ color: 'var(--gold)', margin: '0 auto 0.75rem' }} />
                 <p style={{ fontFamily: 'var(--font-serif)', fontSize: '2.25rem', fontWeight: 400, color: 'var(--white)', lineHeight: 1 }}>
@@ -127,7 +128,7 @@ const Home = () => {
         <div className="container">
           <SectionHeader subtitle="Our Expertise" title="Curated Hair Services" />
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
+          <div className="r-grid-services-home">
             {services.map((service, i) => (
               <motion.div
                 key={i}
@@ -185,7 +186,7 @@ const Home = () => {
       {/* ── EXPERIENCE / ABOUT STRIP ── */}
       <section className="section-pad bg-ink-1">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+          <div className="r-grid-two-col">
             {/* Image side */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
@@ -245,7 +246,7 @@ const Home = () => {
         </div>
         <div className="container relative z-10">
           <SectionHeader subtitle="Voices of Elegance" title="What Our Clients Say" />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
+          <div className="r-grid-testimonials">
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}
@@ -283,7 +284,7 @@ const Home = () => {
       {/* ── GALLERY TEASER ── */}
       <section className="section-pad bg-white">
         <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem', flexWrap: 'wrap', gap: '1.5rem' }}>
+          <div className="r-row-between" style={{ marginBottom: '3rem' }}>
             <div>
               <span className="section-label">Visual Inspiration</span>
               <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 400, color: 'var(--ink)' }}>Our Artistry</h2>
@@ -291,7 +292,7 @@ const Home = () => {
             <GlowButton to="/gallery" variant="outline">Full Gallery</GlowButton>
           </div>
 
-          <div style={{ display: 'flex', gap: '0.75rem', height: '32rem', overflow: 'hidden', borderRadius: '4px' }}>
+          <div className="r-gallery-accordion">
             {galleryImages.map((src, i) => (
               <motion.div
                 key={i}
