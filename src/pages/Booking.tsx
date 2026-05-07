@@ -28,7 +28,7 @@ const Booking = () => {
     <div style={{ background: 'var(--ink)', minHeight: '100vh', overflowX: 'hidden' }}>
 
       {/* HERO */}
-      <section style={{ paddingTop: '9rem', paddingBottom: '4rem', position: 'relative' }}>
+      <section className="r-booking-hero" style={{ paddingTop: '9rem', paddingBottom: '4rem', position: 'relative' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.07) 0%, transparent 65%)', pointerEvents: 'none' }} />
         <div className="container relative z-10">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22,1,0.36,1] }}>
@@ -45,7 +45,7 @@ const Booking = () => {
       {/* MAIN CONTENT */}
       <section style={{ paddingBottom: '7rem' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '4rem', alignItems: 'start' }}>
+          <div className="r-grid-booking">
 
             {/* LEFT: info */}
             <motion.div initial={{ opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: [0.22,1,0.36,1] }}>
@@ -120,7 +120,7 @@ const Booking = () => {
                       value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} />
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <div className="r-form-two-col">
                     {/* Phone */}
                     <div>
                       <label className="form-label">Phone Number</label>
@@ -149,7 +149,7 @@ const Booking = () => {
                     </select>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <div className="r-form-two-col">
                     {/* Date */}
                     <div>
                       <label className="form-label">Preferred Date</label>

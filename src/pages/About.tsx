@@ -74,7 +74,7 @@ const About = () => {
                 <img src="/assets/about-salon.jpg" alt="Imara Hair Studio" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               {/* floating accent */}
-              <div style={{ position: 'absolute', bottom: '-1.5rem', left: '-1.5rem', width: '10rem', padding: '1.5rem', background: 'var(--ink)', borderRadius: '4px', boxShadow: 'var(--shadow-lg)' }}>
+              <div className="r-float-accent" style={{ position: 'absolute', bottom: '-1.5rem', left: '-1.5rem', width: '10rem', padding: '1.5rem', background: 'var(--ink)', borderRadius: '4px', boxShadow: 'var(--shadow-lg)' }}>
                 <p className="gold-text" style={{ fontFamily: 'var(--font-serif)', fontSize: '2.5rem', fontWeight: 400, lineHeight: 1 }}>5k+</p>
                 <p style={{ fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(250,247,242,0.4)', marginTop: '0.4rem' }}>Happy Clients</p>
               </div>

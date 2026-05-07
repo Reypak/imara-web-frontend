@@ -43,7 +43,7 @@ const Services = () => {
     <div style={{ background: 'var(--cream)', overflowX: 'hidden' }}>
 
       {/* ── PAGE HERO ── */}
-      <section style={{ paddingTop: '10rem', paddingBottom: '5rem', background: 'var(--ink)', position: 'relative', overflow: 'hidden' }}>
+      <section className="r-page-hero" style={{ paddingTop: '10rem', paddingBottom: '5rem', background: 'var(--ink)', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 65%)', pointerEvents: 'none' }} />
         <div className="container relative z-10">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22,1,0.36,1] }}>
@@ -63,7 +63,7 @@ const Services = () => {
       {/* ── SERVICE CATEGORIES ── */}
       <section className="section-pad bg-cream">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+          <div className="r-grid-services-page">
             {categories.map((cat, idx) => (
               <motion.div
                 key={idx}
@@ -104,7 +104,8 @@ const Services = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            style={{ maxWidth: '48rem', margin: '0 auto', textAlign: 'center', padding: '4rem', border: '1px solid rgba(201,168,76,0.18)', borderRadius: '4px', background: 'rgba(201,168,76,0.04)' }}
+            className="r-cta-box"
+            style={{ maxWidth: '48rem', margin: '0 auto', textAlign: 'center', border: '1px solid rgba(201,168,76,0.18)', borderRadius: '4px', background: 'rgba(201,168,76,0.04)' }}
           >
             <span style={{ fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--gold)', display: 'block', marginBottom: '1rem' }}>
               Special Events

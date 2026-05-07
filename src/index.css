@@ -497,6 +497,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer top flex */
 .r-footer-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
 
+/* CTA box */
+.r-cta-box { padding: 4rem; }
+
 /* ── Flex row that stacks on mobile ── */
 .r-row { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
 .r-row-between { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
@@ -539,6 +542,23 @@ h1, h2, h3, h4, h5, h6 {
   .r-footer-top         { flex-direction: column; text-align: center; }
   .section-pad          { padding: 4rem 0; }
   .btn-lg               { padding: 1rem 2rem; font-size: 0.75rem; }
+  .r-cta-box            { padding: 2rem 1.5rem; }
+
+  /* Hero pages: reduce top padding on mobile */
+  .r-page-hero    { padding-top: 7rem !important; padding-bottom: 3rem !important; }
+  .r-booking-hero { padding-top: 7rem !important; padding-bottom: 2.5rem !important; }
+
+  /* Fix floating badges that overflow on mobile */
+  .r-float-badge {
+    position: static !important;
+    margin-top: 1.5rem;
+    display: inline-block;
+  }
+  .r-float-accent {
+    position: static !important;
+    margin-top: 1.5rem;
+    display: inline-block;
+  }
 }
 
 /* Small mobile ≤480px */
@@ -547,6 +567,11 @@ h1, h2, h3, h4, h5, h6 {
   .r-grid-stats    { grid-template-columns: repeat(2, 1fr); }
   .container       { padding: 0 1rem; }
   .section-pad     { padding: 3rem 0; }
+  .r-cta-box       { padding: 1.5rem 1rem; }
+
+  /* Hero pages: reduce top padding so content isn't hidden behind navbar */
+  .r-page-hero    { padding-top: 7rem !important; padding-bottom: 3rem !important; }
+  .r-booking-hero { padding-top: 7rem !important; padding-bottom: 2.5rem !important; }
 }
 
 /* ── Navbar mobile helpers ── */

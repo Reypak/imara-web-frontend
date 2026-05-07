@@ -54,7 +54,7 @@ const Gallery = () => {
       {/* GRID */}
       <section style={{ paddingBottom: '6rem' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem' }}>
+          <div className="r-grid-gallery" style={{ gap: '1rem' }}>
             {filtered.map((item, i) => (
               <motion.div key={`${item.label}-${i}`}
                 initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }}
