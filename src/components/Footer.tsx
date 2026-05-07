@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Camera, Globe, MessageCircle, MapPin, Mail, Phone, ArrowUpRight } from 'lucide-react';
+import logoLight from '../assets/svg/logo/logo-light.svg';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -31,13 +32,24 @@ const Footer = () => {
 
           {/* Brand */}
           <div>
-            <div style={{ marginBottom: '1.5rem' }}>
-              <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', fontWeight: 600, color: 'var(--white)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-                Imara
-              </p>
-              <p style={{ fontSize: '0.55rem', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'var(--gold)' }}>
-                Hair Studio
-              </p>
+            <div style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <img
+                src={logoLight}
+                alt="Imara Hair Studio"
+                style={{
+                  height: '5rem',
+                  width: 'auto',
+                  filter: 'drop-shadow(0 2px 12px rgba(201,168,76,0.3))',
+                }}
+              />
+              <div>
+                <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', fontWeight: 600, color: 'var(--white)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+                  Imara
+                </p>
+                <p style={{ fontSize: '0.55rem', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'var(--gold)' }}>
+                  Hair Studio
+                </p>
+              </div>
             </div>
             <p style={{ fontSize: '0.875rem', lineHeight: 1.8, color: 'rgba(250,247,242,0.45)', maxWidth: '22ch', marginBottom: '2rem' }}>
               Kampala's premier sanctuary for luxury hair artistry — where tradition meets modern elegance.
@@ -147,9 +159,16 @@ const Footer = () => {
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', padding: '1.5rem 0' }}>
         <div className="container flex-between flex-wrap gap-2">
-          <p style={{ fontSize: '0.68rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(250,247,242,0.2)' }}>
-            © {year} Imara Hair Studio. All rights reserved.
-          </p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <img
+              src={logoLight}
+              alt="Imara Hair Studio"
+              style={{ height: '2rem', width: 'auto', opacity: 0.6 }}
+            />
+            <p style={{ fontSize: '0.68rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(250,247,242,0.2)' }}>
+              © {year} Imara Hair Studio. All rights reserved.
+            </p>
+          </div>
           <div style={{ display: 'flex', gap: '2rem' }}>
             {['Privacy Policy', 'Terms of Service'].map(t => (
               <a

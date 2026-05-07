@@ -10,9 +10,9 @@ const values = [
 ];
 
 const team = [
-  { name: 'Amara Nakato', role: 'Founder & Lead Stylist', image: '/assets/team-1.jpg' },
-  { name: 'Olivia Namusoke', role: 'Braiding Specialist', image: '/assets/team-2.jpg' },
-  { name: 'Patricia Atim', role: 'Treatment Expert', image: '/assets/team-3.jpg' },
+  { name: 'Amara Nakato', role: 'Founder & Lead Stylist', image: '/assets/natural.jpg' },
+  { name: 'Olivia Namusoke', role: 'Braiding Specialist', image: '/assets/natural.jpg' },
+  { name: 'Patricia Atim', role: 'Treatment Expert', image: '/assets/natural.jpg' },
 ];
 
 const About = () => {
