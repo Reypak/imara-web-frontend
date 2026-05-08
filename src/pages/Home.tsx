@@ -112,7 +112,7 @@ const Home = () => {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(to bottom, rgba(13,12,10,0.55) 0%, rgba(13,12,10,0.3) 40%, rgba(13,12,10,0.8) 100%)",
+                "linear-gradient(to bottom, rgba(13,12,10,0.55) 0%, rgba(13,12,10,0.8) 40%, rgba(13,12,10,0.3) 100%)",
             }}
           />
         </motion.div>
@@ -167,9 +167,9 @@ const Home = () => {
                 style={{
                   display: "block",
                   fontSize: "clamp(2rem, 6vw, 5rem)",
-                  letterSpacing: "0.35em",
-                  fontStyle: "italic",
-                  fontWeight: 300,
+                  letterSpacing: "0.3em",
+                  fontWeight: 200,
+                  fontFamily: "var(--font-sans)",
                 }}
               >
                 HAIR STUDIO
@@ -178,8 +178,8 @@ const Home = () => {
 
             <p
               style={{
-                fontSize: "clamp(1rem, 2vw, 1.2rem)",
-                color: "rgba(250,247,242,0.7)",
+                fontSize: "clamp(1rem, 2vw, 1.1rem)",
+                color: "rgba(255, 255, 255, 1)",
                 maxWidth: "36rem",
                 margin: "0 auto 3rem",
                 fontWeight: 300,
@@ -256,13 +256,13 @@ const Home = () => {
                 style={{ textAlign: "center", padding: "1.5rem" }}
               >
                 <Icon
-                  size={20}
+                  size={30}
                   style={{ color: "var(--gold)", margin: "0 auto 0.75rem" }}
                 />
                 <p
                   style={{
                     fontFamily: "var(--font-serif)",
-                    fontSize: "2.25rem",
+                    fontSize: "3.25rem",
                     fontWeight: 400,
                     color: "var(--white)",
                     lineHeight: 1,
@@ -607,7 +607,7 @@ const Home = () => {
         <div
           style={{
             position: "absolute",
-            top: "50%",
+            top: "43%",
             left: "50%",
             transform: "translate(-50%,-50%)",
             fontFamily: "var(--font-serif)",
@@ -637,75 +637,119 @@ const Home = () => {
                 style={{
                   background: "var(--white)",
                   padding: "2.5rem",
-                  borderRadius: "4px",
-                  boxShadow: "var(--shadow-sm)",
+                  borderRadius: "8px",
+                  boxShadow: "0 10px 40px -10px rgba(13,12,10,0.06)",
                   position: "relative",
-                  transition: "all 0.4s",
-                  borderBottom: "3px solid transparent",
+                  transition: "all 0.5s cubic-bezier(0.22, 1, 0.36, 1)",
+                  border: "1px solid rgba(201,168,76,0.1)",
+                  display: "flex",
+                  flexDirection: "column",
+                  overflow: "hidden",
+                  zIndex: 1,
+                  borderTop: "3px solid transparent",
                 }}
                 whileHover={
                   {
-                    y: -4,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                    borderBottomColor: "var(--gold)",
+                    y: -8,
+                    boxShadow: "0 24px 48px -12px rgba(201,168,76,0.2)",
+                    borderColor: "rgba(201,168,76,0.3)",
+                    borderTopColor: "var(--gold)",
                   } as object
                 }
               >
+                {/* Background Decor */}
                 <Quote
-                  size={32}
+                  size={140}
                   style={{
+                    position: "absolute",
+                    top: "-20px",
+                    right: "-20px",
                     color: "var(--gold)",
-                    opacity: 0.2,
-                    marginBottom: "1.5rem",
+                    opacity: 0.04,
+                    transform: "rotate(10deg)",
+                    zIndex: -1,
+                    pointerEvents: "none",
                   }}
                 />
+
                 <div
                   style={{
                     display: "flex",
-                    gap: "3px",
-                    marginBottom: "1.25rem",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    marginBottom: "2rem",
                   }}
                 >
-                  {Array(t.stars)
-                    .fill(0)
-                    .map((_, j) => (
-                      <Star
-                        key={j}
-                        size={13}
-                        style={{ fill: "var(--gold)", color: "var(--gold)" }}
-                      />
-                    ))}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "3.25rem",
+                      height: "3.25rem",
+                      borderRadius: "50%",
+                      background: "rgba(201,168,76,0.08)",
+                      color: "var(--gold-dark)",
+                    }}
+                  >
+                    <Quote size={20} style={{ fill: "currentColor" }} />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "4px",
+                      paddingTop: "0.5rem",
+                    }}
+                  >
+                    {Array(t.stars)
+                      .fill(0)
+                      .map((_, j) => (
+                        <Star
+                          key={j}
+                          size={14}
+                          style={{ fill: "var(--gold)", color: "var(--gold)" }}
+                        />
+                      ))}
+                  </div>
                 </div>
+
                 <p
                   style={{
-                    fontSize: "1rem",
-                    lineHeight: 1.8,
+                    fontSize: "0.85rem",
+                    lineHeight: 1.85,
                     color: "var(--ink)",
                     fontStyle: "italic",
-                    fontWeight: 300,
-                    fontFamily: "var(--font-serif)",
-                    marginBottom: "2rem",
+                    fontWeight: 400,
+                    flex: 1,
+                    marginBottom: "1rem",
                   }}
                 >
                   "{t.text}"
                 </p>
+
                 <div
-                  style={{ display: "flex", alignItems: "center", gap: "1rem" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1.25rem",
+                    paddingTop: "1.5rem",
+                    borderTop: "1px solid rgba(13,12,10,0.06)",
+                  }}
                 >
                   <div
                     style={{
-                      width: "2.75rem",
-                      height: "2.75rem",
+                      width: "3rem",
+                      height: "3rem",
                       borderRadius: "50%",
-                      background:
-                        "linear-gradient(135deg, var(--gold-dark), var(--gold))",
+                      background: "var(--gold-grad)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       fontFamily: "var(--font-serif)",
                       fontWeight: 600,
                       color: "var(--ink)",
-                      fontSize: "1.1rem",
+                      fontSize: "1.25rem",
+                      boxShadow: "0 4px 12px rgba(201,168,76,0.3)",
                     }}
                   >
                     {t.name.charAt(0)}
@@ -716,17 +760,20 @@ const Home = () => {
                         fontFamily: "var(--font-serif)",
                         fontWeight: 600,
                         color: "var(--ink)",
-                        fontSize: "1rem",
+                        fontSize: "1.1rem",
+                        letterSpacing: "0.02em",
+                        marginBottom: "0.2rem",
                       }}
                     >
                       {t.name}
                     </p>
                     <p
                       style={{
-                        fontSize: "0.65rem",
-                        letterSpacing: "0.2em",
+                        fontSize: "0.6rem",
+                        letterSpacing: "0.15em",
                         textTransform: "uppercase",
                         color: "var(--muted)",
+                        fontWeight: 400,
                       }}
                     >
                       {t.role}
@@ -824,7 +871,7 @@ const Home = () => {
       >
         <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
           <img
-            src="/assets/cta-bg.jpg"
+            src="/assets/bridal.jpg"
             alt=""
             style={{
               width: "100%",
