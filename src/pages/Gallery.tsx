@@ -5,22 +5,24 @@ import GlowButton from "../components/GlowButton";
 const CATEGORIES = ["All", "Braids", "Treatments", "Bridal", "Natural"];
 
 const galleryItems = [
-  { src: "/assets/gallery-1.jpg", cat: "Braids", label: "Knotless Braids" },
+  { src: "/assets/braids.jpg", cat: "Braids", label: "Knotless Braids" },
   {
-    src: "/assets/gallery-2.jpg",
+    src: "/assets/treatment.jpg",
     cat: "Treatments",
     label: "Luxury Treatment",
   },
-  { src: "/assets/gallery-3.jpg", cat: "Bridal", label: "Bridal Styling" },
-  { src: "/assets/gallery-4.jpg", cat: "Natural", label: "Natural Twist Out" },
-  { src: "/assets/gallery-1.jpg", cat: "Braids", label: "Box Braids" },
-  { src: "/assets/gallery-2.jpg", cat: "Natural", label: "Wash & Go" },
-  { src: "/assets/gallery-3.jpg", cat: "Braids", label: "Cornrows" },
-  { src: "/assets/gallery-4.jpg", cat: "Treatments", label: "Steam Treatment" },
-  { src: "/assets/gallery-1.jpg", cat: "Bridal", label: "Wedding Updo" },
-  { src: "/assets/gallery-2.jpg", cat: "Braids", label: "Ghana Weaving" },
-  { src: "/assets/gallery-3.jpg", cat: "Natural", label: "Dreadlocks" },
-  { src: "/assets/gallery-4.jpg", cat: "Treatments", label: "Deep Condition" },
+  { src: "/assets/bridal.jpg", cat: "Bridal", label: "Bridal Styling" },
+  { src: "/assets/natural.jpg", cat: "Natural", label: "Natural Twist Out" },
+
+  { src: "/assets/natural.jpg", cat: "Treatments", label: "Deep Condition" },
+  { src: "/assets/bridal.jpg", cat: "Natural", label: "Dreadlocks" },
+  { src: "/assets/treatment.jpg", cat: "Braids", label: "Ghana Weaving" },
+  { src: "/assets/braids.jpg", cat: "Bridal", label: "Wedding Updo" },
+
+  { src: "/assets/braids.jpg", cat: "Braids", label: "Box Braids" },
+  { src: "/assets/treatment.jpg", cat: "Natural", label: "Wash & Go" },
+  { src: "/assets/bridal.jpg", cat: "Braids", label: "Cornrows" },
+  { src: "/assets/natural.jpg", cat: "Treatments", label: "Steam Treatment" },
 ];
 
 const Gallery = () => {
