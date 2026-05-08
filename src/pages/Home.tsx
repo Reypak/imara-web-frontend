@@ -74,10 +74,10 @@ const stats = [
 ];
 
 const galleryImages = [
-  "/assets/gallery-1.jpg",
-  "/assets/gallery-2.jpg",
-  "/assets/gallery-3.jpg",
-  "/assets/gallery-4.jpg",
+  "/assets/braids.jpg",
+  "/assets/treatment.jpg",
+  "/assets/bridal.jpg",
+  "/assets/natural.jpg",
 ];
 
 const Home = () => {
