@@ -1,26 +1,26 @@
-import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 interface GlowButtonProps {
   children: ReactNode;
   to?: string;
   onClick?: () => void;
   className?: string;
-  variant?: 'gold' | 'outline' | 'outline-white';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: "gold" | "outline" | "outline-white";
+  size?: "sm" | "md" | "lg";
 }
 
 const GlowButton = ({
   children,
   to,
   onClick,
-  className = '',
-  variant = 'gold',
-  size = 'md',
+  className = "",
+  variant = "gold",
+  size = "md",
 }: GlowButtonProps) => {
   const variantClass = `btn-${variant}`;
-  const sizeClass = size === 'lg' ? 'btn-lg' : size === 'sm' ? 'btn-sm' : '';
+  const sizeClass = size === "lg" ? "btn-lg" : size === "sm" ? "btn-sm" : "";
 
   const content = (
     <motion.button

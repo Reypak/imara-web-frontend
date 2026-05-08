@@ -68,7 +68,7 @@ const testimonials = [
 
 const stats = [
   { icon: Award, value: "10+", label: "Years of Excellence" },
-  { icon: Users, value: "5000+", label: "Happy Clients" },
+  { icon: Users, value: "2000+", label: "Happy Clients" },
   { icon: Sparkles, value: "20+", label: "Expert Stylists" },
   { icon: Clock, value: "7 Days", label: "A Week" },
 ];
@@ -648,14 +648,12 @@ const Home = () => {
                   zIndex: 1,
                   borderTop: "3px solid transparent",
                 }}
-                whileHover={
-                  {
-                    y: -8,
-                    boxShadow: "0 24px 48px -12px rgba(201,168,76,0.2)",
-                    borderColor: "rgba(201,168,76,0.3)",
-                    borderTopColor: "var(--gold)",
-                  } as object
-                }
+                whileHover={{
+                  y: -8,
+                  boxShadow: "0 24px 48px -12px rgba(201,168,76,0.2)",
+                  borderColor: "rgba(201,168,76,0.3)",
+                  borderTopColor: "var(--gold)",
+                }}
               >
                 {/* Background Decor */}
                 <Quote
